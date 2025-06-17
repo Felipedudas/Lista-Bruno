@@ -105,3 +105,62 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         super.onDestroy()
     }
 }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+XML
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/captureImageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📸 Capturar Cardápio"
+        android:background="#FFD600"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/capturedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#222222"
+        android:contentDescription="Imagem capturada"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/extractedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#222222"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:text="Texto reconhecido aparecerá aqui"
+        android:layout_marginBottom="8dp"
+        android:gravity="start|top"/>
+
+    <Button
+        android:id="@+id/readTextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔊 Ler Texto"
+        android:background="#FFD600"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+</LinearLayout>
+
+
